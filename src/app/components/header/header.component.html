@@ -1,0 +1,12 @@
+<h1 class="title">Listado de Pokemon</h1>
+<div class="flex justify-between " >
+    <div class="search-container">
+        <i class='bx bx-search icon bx-sm' ></i>
+        
+        <input type="text" name="" id="" placeholder="Buscar" [formControl]="searchControl">
+    </div>
+    <button data-test="btn-add" class="btn flex items-center justify-center" (click)="addNew()">
+        <i class='bx bx-plus bx-sm'></i>
+        <span class="ml-auto">Nuevo</span>
+    </button>
+</div>

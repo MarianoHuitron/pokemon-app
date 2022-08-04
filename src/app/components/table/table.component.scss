@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+    margin-top: 25px;
+    padding: 1rem;
+    border-collapse: collapse;
+
+}
+th {
+    text-align: center;
+    padding: .5rem;
+}
+tr td {
+    padding: .5rem;
+}
+
+th, td {
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+
+
+.image-container {
+    width: 60px;
+    height: 50px;
+    padding: .2rem;
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 80%;
+        height: 80%;
+    }
+}

@@ -1,0 +1,31 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Imágen</th>
+            <th>Ataque</th>
+            <th>Defensa</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let pokemon of pokemonList$ | async">
+            <tr>
+                <td>{{pokemon.name}}</td>
+                <td class="flex items-center justify-center">
+                    <div class="image-container">
+                        <img [src]="pokemon.image || 'assets/no-image.png'"  >
+                    </div>
+                </td>
+                <td>{{pokemon.attack}}</td>
+                <td>{{pokemon.defense}}</td>
+                <td>
+                    <div class="flex justify-around">
+                        <a (click)="setEdit(pokemon)"><i class='bx bx-edit-alt bx-sm text-primary pointer'></i></a>
+                        <a (click)="delete(pokemon)"><i class='bx bx-trash-alt bx-sm text-primary pointer' ></i></a>
+                    </div>
+                </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

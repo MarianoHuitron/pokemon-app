@@ -1,0 +1,39 @@
+
+<ng-container *ngIf="show | async">
+    <div class="form-container">
+        <div class="form-title">Nuevo Pokemon</div>
+        <form [formGroup]="form"> 
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label>Ataque</label>
+                <span>0</span>
+                <input type="range" min="0" max="100" formControlName="attack">
+                <span>100</span>
+            </div>
+            <div class="form-group">
+                <label>Imagen:</label>
+                <input type="url" placeholder="url" formControlName="image">
+            </div>
+            
+            <div class="form-group">
+                <label>Defensa</label>
+                <span>0</span>
+                <input type="range" min="0" max="100" formControlName="defense">
+                <span>100</span>
+            </div>
+        </form>
+        <div class="flex items-center justify-center buttons-form">
+            <button class="btn flex items-center justify-center" [disabled]="form.invalid" (click)="save()">
+                <i class='bx bx-save bx-sm' ></i>
+                <span class="ml-auto">Guardar</span>
+            </button>
+            <button class="btn flex items-center justify-center" (click)="cancel()">
+                <i class='bx bx-x bx-sm' ></i>
+                <span class="ml-auto">Cancelar</span>
+            </button>
+        </div>
+    </div>
+</ng-container>
